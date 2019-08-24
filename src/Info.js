@@ -21,11 +21,17 @@ class Info extends Component{
     }
    
 
-    changeCounter =(num)=>{
-        if(this.state.counter === Data.length-1){
-            this.state({})
+    changeCounter = (num) => {
+        if(this.state.counter === data.length - 1 && num > 0) {
+            this.setState({counter: 0});
+        } else if(this.state.counter <= 0 && num < 0) {
+            this.setState({counter: data.length - 1});
+        } else {
+            this.setState({counter: this.state.counter + num});
         }
+
     }
+
     render(){
         return(
         <div className ='first'>
@@ -44,10 +50,10 @@ class Info extends Component{
                 </ul>
             </div>
             <div className = 'buttons'>
-                <button onClick = {this.decrement} style ={{'background-color':'transparent','color':'white','borderColor':'transparent',
-                 'fontSize':'2.5vw','margin-left':'15vw'}}>{'<'}Previous</button>
-                 <button onClick ={this.increment} style ={{'background-color':'transparent','color':'white','borderColor':'transparent',
-                 'fontSize':'2.5vw','marginLeft':'50vw'}}>Next{'>'}</button>
+                <button onClick = {()=>this.changeCounter(-1)} style ={{'background-color':'transparent','color':'white','borderColor':'transparent',
+                 'fontSize':'2.5vw','margin-left':'15vw','cursor':'pointer'}}>{'<'}Previous</button>
+                 <button onClick ={()=>this.changeCounter(1)} style ={{'background-color':'transparent','color':'white','borderColor':'transparent',
+                 'fontSize':'2.5vw','marginLeft':'50vw','cursor':'pointer'}}>Next{'>'}</button>
                 
             </div>
             <div className = 'h'>

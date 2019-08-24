@@ -6,8 +6,9 @@ h1{
   flex-direction: column;
   font-size: 1.5vw;
   font-size:1.5vh;
-  margin-left:10vw;
+  margin-left:6vw;
   font-weight:bold;
+  list-style:decimal;
 
 }
 li{
@@ -19,13 +20,14 @@ li{
   justify-content: space-around;
   width: 30vw;
   margin-left: 35vw;
+  
 }
 #but{
-  font-size: 1.5vw;
-  border-radius: 30% 40%;
+  font-size: 1vw;
+  border-radius: 30% / 45%;
   background-color:#34c9eb;
   color:white;
-  font-weight: bolder;
+  font-weight: bold;
   border-color:transparent;
 }
 .counter{
@@ -40,6 +42,8 @@ li{
   margin-left:5vw;
   font-weight:bolder;
   margin-bottom: 1vh;
+  text-decoration: underline;
+  text-decoration-color: #34c9eb
 
 }
 .state,.job,.employer{

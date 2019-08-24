@@ -9,17 +9,14 @@ class App extends Component{
   constructor(){
     super()
     this.state ={
-      users: [...Data],
-      userNum:0
+    
     }
   }
   render(){
     return(
       <div>
         <Home/>
-        <Info>
-        </Info>
-        
+        <Info/>
         <style>{'body { background-color: #1d2024; }'}</style>
       </div>
      
